@@ -1,19 +1,23 @@
 from openerp import fields, models
 
+
 '''
-This module create model of Course
+This module create model of Course 2
 '''
 
+
 class Course(models.Model):
+
     '''
     This class create model of Course
     '''
-    _name = 'openacademy.course'  #  Model odoo name
-
-    name = fields.Char(string='Title', required=True)  #  Field reserved to identified name rec
+    #  Model odoo name
+    _name = 'openacademy.course'
+    #  Field reserved to identified name rec
+    name = fields.Char(string='Title', required=True)
     description = fields.Text(string='Description')
     responsible_id = fields.Many2one('res.users',
-                     		     ondelete='set null',
-				     string="Responsible", index=True)
-    session_ids = fields.One2many('openacademy.session', 'course_id', string="Sessions")
-
+                                     ondelete='set null',
+                                     string="Responsible", index=True)
+    session_ids = fields.One2many('openacademy.session',
+                                  'course_id', string="Sessions")
