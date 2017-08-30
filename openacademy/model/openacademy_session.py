@@ -47,3 +47,10 @@ class Session(models.Model):
          if self.instructor_id and self.instructor_id in self.attendee_ids:
              raise exceptions.ValidationError("A session's instructor can't be an attendee")
 
+
+    _sql_constraints = [
+        ('number_seats__check',
+         'CHECK(seats <= 20)',
+         "The number of seats can not be more than 20"),
+    ]
+
