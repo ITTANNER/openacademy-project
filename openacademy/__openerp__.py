@@ -23,6 +23,7 @@
         'view/partner_view.xml',
         'security/security.xml',
         'security/ir.model.access.csv',
+        'view/openacademy_wizard.xml',
         #'templates.xml',
     ],
     # only loaded in demonstration mode
