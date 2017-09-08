@@ -30,5 +30,10 @@
                     view_mode="form"
                     target="new"
                     key2="client_action_multi"/>
+
+        <menuitem id="menu_launch_session_wizard" name="Add Attendees massive"
+                  parent="openacademy.openacademy_menu"
+                  action="launch_session_wizard"
+                  groups="openacademy.group_manager" />
     </data>
 </openerp>
