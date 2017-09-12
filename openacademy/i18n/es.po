@@ -161,7 +161,7 @@ msgstr "Duración en días"
 #. module: openacademy
 #: field:openacademy.session,hours:0
 msgid "Duration in hours"
-msgstr "Duratición en horas"
+msgstr "Duración en horas"
 
 #. module: openacademy
 #: field:openacademy.session,end_date:0
