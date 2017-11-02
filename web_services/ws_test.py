@@ -30,15 +30,19 @@ print "sessions", sessions
 for session in sessions:
    print "Session %s (%s seats), taken seats %d" % (session['name'], session['seats'], session['taken_seats'])
 
-
 # 3.create a new session
-
 course_ids = call('openacademy.course', 'search', [('name','=','Course 0')])
 #print "-----COURSO IDS --------",course_ids
 course_id = course_ids[0]
+responsible_ids = call('res.partner', 'search', [('name','=','Vauxoo')])
+responsible_id = responsible_ids[0]
+print "RESPONSABLE ID>>", responsible_id
 
 session_id = call(model, 'create', {
-   'name' : 'My session from Web Service',
+   'name' : 'Session from WS',
    'course_id' : course_id,
-   'seats' : 25,
+   'instructor_id' : responsible_id,
+   'seats' : 15,
+   'attendee_ids': [(4, responsible_id)],
 })
+print "new_session_id",session_id
